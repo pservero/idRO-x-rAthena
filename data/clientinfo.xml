@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<clientinfo>
+<servicetype>korea</servicetype>
+	<servertype>primary</servertype>
+	<connection>
+		<display>Ragnarok Offline</display>
+		<balloon>Ragnarok Offline</balloon>
+		<desc>Ragnarok Offline</desc>
+		<address>127.0.0.1</address>
+		<port>6900</port>
+		<version>46</version>
+		<langtype>0</langtype>
+		<aid>
+			<admin>2000000</admin>
+		</aid>
+		<yellow>
+			<admin>2000000</admin>
+		</yellow>
+	</connection>
+</clientinfo>
