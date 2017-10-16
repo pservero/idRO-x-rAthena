@@ -1,16 +1,16 @@
 main = function()
 	iiFiles = {
-		"System/itemInfo_idRO.lua", -- 3rd
-		"System/itemInfo_Translation.lua", -- 1st priority
-		"System/itemInfo_kRO.lua", -- 4th
-		"System/itemInfo_iRO.lua", -- 2nd
+		"System/itemInfo_idRO.lua",
+		"System/itemInfo_Translation.lua",
+		"System/itemInfo_iRO.lua",
+		"System/itemInfo_kRO.lua",
 	}
 
 	_TempItems = {}
 	_Num = 0
 
 	-- check existing item
-	function CheckItem(ItemID, DESC)
+	function CheckItem(ItemID, DESC, flag)
 		if not (_TempItems[ItemID]) then
 			_TempItems[ItemID] = DESC
 			_Num = _Num + 1
@@ -22,6 +22,11 @@ main = function()
 			for pos,val in pairs(DESC) do
 				if not (myTbl[pos]) or myTbl[pos] == "" then
 					myTbl[pos] = val
+				end
+			end
+			if flag == true and DESC.ClassNum then
+				if not (_TempItems[ItemID].ClassNum) or _TempItems[ItemID].ClassNum == 0 then
+					myTbl["ClassNum"] = DESC.ClassNum
 				end
 			end
 			_TempItems[ItemID] = myTbl

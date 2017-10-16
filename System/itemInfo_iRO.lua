@@ -119213,5 +119213,5 @@ tbl = {
 }
 
 for ItemID,DESC in pairs(tbl) do
-	CheckItem(ItemID,DESC)
+	CheckItem(ItemID,DESC,false)
 end
